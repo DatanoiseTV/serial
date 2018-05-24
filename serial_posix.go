@@ -37,6 +37,8 @@ func openPort(name string, baud int, databits byte, parity Parity, stopbits Stop
 	}
 	var speed C.speed_t
 	switch baud {
+	case 460800:
+		speed = 460800
 	case 115200:
 		speed = C.B115200
 	case 57600:
